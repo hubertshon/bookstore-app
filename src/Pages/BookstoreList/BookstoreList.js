@@ -10,7 +10,6 @@ export const BookstoreList = () => {
    useEffect(() => {
       getStores()
       .then((jsonResponse) => {
-         console.log(jsonResponse);
          if (jsonResponse.data !== null) {
             for (let dataset of jsonResponse.data) {
                dataset["books"] = getBooks(dataset, jsonResponse);
@@ -34,7 +33,6 @@ export const BookstoreList = () => {
    }
 
    function getBooks(bookstore, jsonResponse) {
-      let bookResult = {};
       const bookList = bookstore.relationships.books ? bookstore.relationships.books : [];
       let bookArray = [];
 

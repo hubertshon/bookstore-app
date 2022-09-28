@@ -11,17 +11,9 @@ export const Rating = (props) => {
 
     return <div className="rating-container">
         {[1, 2, 3, 4, 5].map((number) => 
-            number > props.stars ? <FontAwesomeIcon key={number} icon={faStar} size="sm" color="#DDDDDD" className="star" onClick={(e) => handleStarClick(number)} /> 
+            number > props.stars ? <FontAwesomeIcon key={number} icon={faStar} size="sm" color="#DDDDDD" className="star" onClick={handleStarClick(number)} /> 
             :
-            <FontAwesomeIcon key={number} icon={faStar} size="sm" color="#5171A5" className="star" onClick={(e) => handleStarClick(number)} />
+            <FontAwesomeIcon key={number} icon={faStar} size="sm" color="#5171A5" className="star" onClick={handleStarClick(number)} />
         )}
-
-        
-        {/* {Array.from(Array(props.stars).keys()).map((number,) => 
-            <FontAwesomeIcon key={number} icon={faStar} size="sm" color="#5171A5" className="star" onClick={(e) => handleStarClick(number)} />
-        )}
-        {Array.from(Array(5 - props.stars).keys()).map((number) => 
-            <FontAwesomeIcon key={number} icon={faStar} size="sm" color="#DDDDDD" className="star" onClick={(e) => handleStarClick(number)} />
-        )} */}
     </div>
 }
