@@ -71,8 +71,6 @@ export const BookstoreList = () => {
                <Bookstore 
                   key={bookstore.id} 
                   store={bookstore} 
-                  books={bookstore.books} 
-                  country={bookstore.flagUrl} 
                   className="bookstore-item" 
                   changeRating={value => submitNewRating(value)}
                   />

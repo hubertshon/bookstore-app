@@ -27,15 +27,15 @@ export const Bookstore = (props) => {
                 <div className="detail-body">
                 <span className="bestseller-header">Best-selling Books</span>
 
-                {props.books.length > 0 ? 
-                    props.books.slice(0, 2).map((book, index) => {
+                {props.store.books.length > 0 ? 
+                    props.store.books.slice(0, 2).map((book, index) => {
                         return (
-                        <div className="bestsellers">
+                        <div key={index} className="bestsellers">
                             <div className="bestseller-title-container">
-                                <span key={index + book.attributes.name} className="bestseller-title">{book.attributes.name}</span>
+                                <span className="bestseller-title">{book.attributes.name}</span>
                             </div>
                             <div className="bestseller-author-container">
-                                <span key={index + book.author.attributes.fullName} className="bestseller-author">{book.author.attributes.fullName}</span>
+                                <span className="bestseller-author">{book.author.attributes.fullName}</span>
                             </div>
                         </div>)
                     })
@@ -49,7 +49,7 @@ export const Bookstore = (props) => {
                 <span>{format(parseISO(props.store.attributes.establishmentDate), 'dd.MM.yyyy')} - </span>
                 <a href={props.store.attributes.website}>{props.store.attributes.website}</a>
                 </div>
-            <div className="footer-flag-container"><img src={props.country} alt="country" className="footer-flag" /></div>
+            <div className="footer-flag-container"><img src={props.store.flagUrl} alt="country" className="footer-flag" /></div>
         </div>
     </div>
 }

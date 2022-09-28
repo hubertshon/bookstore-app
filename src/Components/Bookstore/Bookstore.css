@@ -18,12 +18,10 @@
     width: 100%;
     display: flex;
     align-items: center;
-    /* flex-wrap: wrap; */
 }
 
 .thumbnail {
     height: 10rem;
-    /* width: 30%; */
     display: flex;
     flex: 1;
     justify-content: center;
@@ -50,7 +48,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
 }
 
 .detail-body {
@@ -69,7 +67,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
     font-size: 0.85em;
 }
 
@@ -139,6 +137,10 @@
 
     .details {
         justify-content: space-around;
+    }
+
+    .detail-name {
+        font-size: calc(1.4em + 1vmin);
     }
 
     .detail-header {
