@@ -5,3 +5,32 @@
     align-items: center;
     margin-top: 2rem;
 }
+
+.error-card {
+    height: 45rem;
+    width: 45rem;
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    background-color: #ececec;
+    color: #495F41;
+    box-shadow: 0px 24px 24px -10px rgb(0,0,0,0.4);
+    margin-bottom: 1.5rem;
+    
+}
+.error-card h4 {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+@media (max-width: 767.98px) { 
+ 
+    .error-card {
+        height: 30rem;
+        width: 19rem;
+    }
+  
+  }

@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import './BookstoreList.css';
 import Bookstore from "../../Components/Bookstore/Bookstore";
 import { getStores, submitRating } from "../../Services/BookstoreService";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 export const BookstoreList = () => {
 
    const [storeList, setStoreList] = useState([]);
+   const [error, setError] = useState(false);
 
    useEffect(() => {
       getStores()
@@ -18,6 +21,8 @@ export const BookstoreList = () => {
             };
          }
          setStoreList(jsonResponse.data);
+      }).catch((error) => {
+         setError(true);
       });
    }, []);
 
@@ -66,7 +71,7 @@ export const BookstoreList = () => {
    }
 
    return (
-      <div className="container">
+      <div className="container" data-testid="container">
             {storeList !== null ? storeList.map((bookstore) => 
                <Bookstore 
                   key={bookstore.id} 
@@ -75,6 +80,10 @@ export const BookstoreList = () => {
                   changeRating={value => submitNewRating(value)}
                   />
             ) : null}
+            {error ? <div className="error-card">
+            <FontAwesomeIcon icon={faTriangleExclamation} color={"#d9944b" } size="2xl" />
+               <h4>We're sorry, there was an error. Please try refreshing.</h4>
+               </div> : null}
       </div>
    )
 
