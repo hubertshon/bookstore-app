@@ -21,19 +21,26 @@ Given that I will need more familiarity with React, I would have enjoyed studyin
 - Testing: Only very basic tests are included. 
 - Logic separation: Component logic can be separated a step further. Particularly, the BookstoreList could have a some logic dispersed into another helper file to make it primarily a display component. 
 - Typescript: As mentioned, I would usually utilize Typescript, (interfaces, typehinting) to ensure proper data types. 
+-Accessibility Features: Would have implemented more features for accessibility. 
 
 
 
 
-## Available Scripts
+## Procedure
 
-In the project directory, you can run:
+1. Run `npm install` inside the 'book-store-api' directory
 
-### `npm start`
+2. Run `npm run start` inside the 'book-store-api' directory to run the json api server
 
-Runs the app in the development mode.\
-Open [http://localhost:2000](http://localhost:2000) to view it in your browser.
+3. Run `npm install` inside this directory
 
+4. Run `npm start` to begin the application
+
+    Runs the app in the development mode.\
+    Open [http://localhost:2000](http://localhost:2000) to view it in your browser.
+
+
+## Other Available Scripts
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

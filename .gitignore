@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+book-store-api/node_modules
+
 
 # testing
 /coverage
