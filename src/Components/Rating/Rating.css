@@ -1,0 +1,20 @@
+.rating-container {
+    cursor: pointer;
+
+}
+
+.rating-container:hover > .star {
+    color: #d9944b;
+}
+
+.star:hover ~ .star,
+.star:hover {
+    color: #CCCCCC;
+}
+
+path {
+    pointer-events: none;
+}
+
+
+
