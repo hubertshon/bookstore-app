@@ -10,11 +10,17 @@
     Separation of Components, minimal dependencies, and mostly one-directional data flow from parent to children. Also places API requests into separate service file. 
 
 - ### React 
-    Attempts at using React's current practices, including the use of functional components, hooks. Utilizing Contexts was considered, but was determined to be not the right solution for this project. 
+    Attempts at using React's current practices, including the use of functional components, hooks, state management, and communication between components. Utilizing Contexts was considered, but was determined to be not the right solution for this project. 
 
     If I were able to re-do this attempt, I would have used Typescript to create proper interfaces and introduce type hinting to all functions. 
 - ### Editable Ratings
-    The rating indicator will allow the user to edit ratings, sending a PATCH request to the API. Click on the number of stars and the app will update.  
+    The rating indicator will allow the user to edit ratings. Hovering over the stars will highlight them to indicate that an interaction is available. Clicking on a star will update the rating for this entry. 
+
+## Wishlist
+Given that I will need more familiarity with React, I would have enjoyed studying and implementing the following: 
+- Testing: Only very basic tests are included. 
+- Logic separation: Component logic can be separated a step further. Particularly, the BookstoreList could have a some logic dispersed into another helper file to make it primarily a display component. 
+- Typescript: As mentioned, I would usually utilize Typescript, (interfaces, typehinting) to ensure proper data types. 
 
 
 
