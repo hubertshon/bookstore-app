@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { format, parseISO } from 'date-fns'
-
 import './Bookstore.css';
 import { Rating } from '../Rating/Rating';
 
 
 export const Bookstore = (props) => {
 
-    const [books] = useState(props.books);
-
     function sendRating(number) {
         props.changeRating({ newRating: number , storeId: props.store.id})
     }
 
-    console.log('bookstore // props', props);
 
     return <div className="bookstore-card">
         <div className="bookstore-body">
