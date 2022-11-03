@@ -6,7 +6,7 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
-    <div className="App">
+    <div className="NewApp">
       <h1 className="app-title"><FontAwesomeIcon icon={faBook} className="book-icon" />Bookstore App</h1>
       <header className="App-header">
         <BookstoreList />
